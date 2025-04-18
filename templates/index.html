@@ -60,7 +60,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
   <a class="navbar-brand d-flex align-items-center" href="#">
-    <img id="themeLogo" src="static/logo-light.png" alt="logo" width="40" height="40" class="me-2" />
+    <img id="themeLogo" src="static/logo-light.jpg" alt="logo" width="40" height="40" class="me-2" />
     <strong>HealthCare AI</strong>
   </a>
   <div class="ms-auto d-flex align-items-center">
@@ -181,14 +181,14 @@
 
     // Swap logo
     document.getElementById("themeLogo").src = isLight
-      ? "static/logo-dark.png"
-      : "static/logo-light.png";
+      ? "static/logo-dark.jpg"
+      : "static/logo-light.jpg";
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById("themeLogo");
     const theme = document.documentElement.getAttribute("data-bs-theme");
-    logo.src = theme === "dark" ? "static/logo-dark.png" : "static/logo-light.png";
+    logo.src = theme === "dark" ? "static/logo-dark.jpg" : "static/logo-light.jpg";
   });
 </script>
 
