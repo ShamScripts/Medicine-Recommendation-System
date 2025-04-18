@@ -12,9 +12,9 @@ app = Flask(__name__)
 # ==========================================
 try:
     Rf = load("model/RandomForest.pkl")
-    print("✅ Model loaded successfully.")
+    print("Model loaded successfully.")
 except Exception as e:
-    print(f"❌ Failed to load model: {e}")
+    print(f"Failed to load model: {e}")
     raise
 
 try:
@@ -25,9 +25,9 @@ try:
     medications = pd.read_csv("kaggle_dataset/medications.csv")
     diets = pd.read_csv("kaggle_dataset/diets.csv")
     training_df = pd.read_csv("kaggle_dataset/Training.csv")
-    print("✅ Datasets loaded successfully.")
+    print("Datasets loaded successfully.")
 except Exception as e:
-    print(f"❌ Failed to load one or more datasets: {e}")
+    print(f"Failed to load one or more datasets: {e}")
     raise
 
 # ==========================================
