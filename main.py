@@ -1,7 +1,8 @@
 from flask import Flask, request, render_template, jsonify
 import numpy as np
 import pandas as pd
-import pickle
+#import pickle
+from joblib import load
 from fuzzywuzzy import process
 import ast
 
@@ -17,7 +18,7 @@ description = pd.read_csv("kaggle_dataset/description.csv")
 medications = pd.read_csv("kaggle_dataset/medications.csv")
 diets = pd.read_csv("kaggle_dataset/diets.csv")
 training_df = pd.read_csv("kaggle_dataset/Training.csv")
-Rf = pickle.load(open("model/RandomForest.pkl", "rb"))
+Rf = load("model/RandomForest.pkl")
 
 # ==========================================
 # Preprocess: Create Symptom-Disease Dictionary
