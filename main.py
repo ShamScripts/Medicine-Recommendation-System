@@ -41,7 +41,8 @@ def predicted_value(symptoms):
     for s in symptoms:
         if s in symptoms_list_processed:
             vector[symptoms_list_processed[s]] = 1
-    return diseases_list[Rf.predict([vector])[0]]
+    input_df = pd.DataFrame([vector], columns=symptoms_list_processed.values())
+    return Rf.predict(input_df)[0]
 
 def correct_spelling(symptom):
     match, score = process.extractOne(symptom.lower(), list(symptoms_list_processed.keys()))
